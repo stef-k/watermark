@@ -15,4 +15,4 @@ Ubuntu 18.10
 
 ## Dependencies
 
-You must install Image Magick
+You must have installed [ImageMagick](https://www.imagemagick.org/script/index.php)
