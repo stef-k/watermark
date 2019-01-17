@@ -30,9 +30,9 @@ function apply_watermark() {
     filename="${image%.*}"
 
     if [[ "$orientation" -eq 1 ]] || [[ "$orientation" -eq 3 ]]; then
-        composite -gravity SouthWest "$LANDSCAPE" -resize 40% "$image" "$filename"_watermarked."$extension"
+        composite -gravity SouthWest \( "$LANDSCAPE" -resize 40% \) "$image" "$filename"_watermarked."$extension"
     elif [[ "$orientation" -eq 8 ]] || [[ "$orientation" -eq 6 ]]; then
-        composite -gravity SouthEast "$PORTRAIT" -resize 40% "$image" "$filename"_watermarked."$extension"
+        composite -gravity SouthEast \( "$PORTRAIT" -resize 40% \) "$image" "$filename"_watermarked."$extension"
     fi
 }
 
