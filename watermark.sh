@@ -39,6 +39,7 @@ function apply_watermark() {
 # Loop over all images in current working directory
 function parse_image_files() {
     for image in $(find "$PWD" -type f -name '*.jpg' -or -name '*.JPG' -or -name '*.jpeg' -or -name '*.png' -or -name '*.PNG'); do
+        echo -e watermarking ${image}
         apply_watermark "$image"
     done
 }
